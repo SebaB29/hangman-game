@@ -1,124 +1,79 @@
-# Hangman Game 🏴‍☠️
+# 🏴‍☠️ Hangman Game
 
-Welcome to **Hangman**, a classic word-guessing game where players try to guess a hidden word by suggesting letters within a limited number of attempts. This project is an implementation of the Hangman game in Python, utilizing structured programming principles.
+Welcome to **Hangman**, a classic word-guessing game implemented in Python. Test your vocabulary and save the pirate by guessing the hidden word letter by letter before you run out of attempts!
 
-## 📜 Table of Contents
+# 📸 Demo
+<div align="center">
+    <img alt="Hangman Gameplay" src="img/hangman.jpg" width="250px">
+    <img alt="Victory Screen" src="img/ganaste.jpg" width="250px">
+    <img alt="Game Over Screen" src="img/perdiste.jpg" width="250px">
+</div>
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Images](#images)
-- [File Structure](#file-structure)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [About This Project](#about)
-- [License](#license)
-- [Security](#security)
-- [Code of Conduct](#code-of-conduct)
+# 📍 Table of Contents
+- [📝 Description](#-description)
+  - [🧩 Key Features](#-key-features)
+  - [🧱 Project Structure](#-project-structure)
+  - [🛠️ Technologies](#️-technologies)
+- [🚀 Getting Started](#-getting-started)
+  - [📋 Prerequisites](#-prerequisites)
+  - [⚙️ Installation](#️-installation)
+- [💡 Usage](#-usage)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
-## 🕹️ Features <a name="features"></a>
+# 📝 Description
+This project focuses on **structured programming** and resource management. It implements the classic hangman mechanics where words are randomly selected from a data source, and the game state is updated dynamically based on user input.
 
-- Classic Hangman gameplay with word guessing
-- Limited attempts to guess the word
-- Random word selection from a predefined list
-- Intuitive graphical interface with keyboard controls
+## 🧩 Key Features
+- **Dynamic Word Selection:** Words are randomly picked from a predefined list in `resource/palabras.py`.
+- **Life System:** Visual representation of the hangman that updates with every incorrect guess.
+- **Input Handling:** Real-time processing of keyboard inputs to reveal hidden letters.
+- **Win/Loss States:** Custom screens for victory and defeat.
 
-## 🚀 Installation <a name="installation"></a>
+## 🧱 Project Structure
+```text
+Hangman/
+├── graphics/    # UI rendering and Gamelib integration
+├── img/         # Gameplay screenshots (Win/Loss/Game)
+├── resource/    # Word database (palabras.py)
+├── src/         # Core logic (ahoracado.py and letter handling)
+├── main.py      # Entry point
+└── LICENSE      # MIT License
+```
 
-To run this project locally, follow these steps:
+## 🛠️ Technologies
+* **Python 3.x**
+* **Gamelib**: A lightweight thread-based rendering library for Python interfaces.
 
+# 🚀 Getting Started
+## 📋 Prerequisites
+* Python 3.10 or higher installed on your system.
+
+## ⚙️ Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SebaB29/hangman.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
+   git clone [https://github.com/SebaB29/hangman.git](https://github.com/SebaB29/hangman.git)
    cd hangman
    ```
 
-3. Run the game:
-   ```bash
-   python main.py
-   ```
-
-## 🎮 Usage <a name="usage"></a>
-
-To play the game, type a letter into the input field and press Enter. You have a limited number of incorrect guesses before the game is over. The goal is to guess the hidden word before running out of attempts.
-
-## 📷 Images <a name="images"></a>
-
-<div style="display: flex;">
-    <img alt="Img Hangman" src="img/hangman.jpg" width="330px" height="350px">
-    <img alt="Img Ganaste" src="img/ganaste.jpg" width="330px" height="350px">
-    <img alt="Img Perdiste" src="img/perdiste.jpg" width="330px" height="350px">
-</div>
-
-## 📁 File Structure <a name="file-structure"></a>
-
-The project structure is as follows:
-
-```
-Hangman/
-├── .github/
-│   ├── CODE_OF_CONDUCT.md
-│   ├── CONTRIBUTING.md
-│   ├── SECURITY.md
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   └── feature_request.md
-│   └── PULL_REQUEST_TEMPLATE.md
-├── graphics/
-│   ├── gamelib.py
-│   └── inter_gráfica.py
-├── img/
-│   └── [3 demo images of the game]
-├── resource/
-│   └── palabras.py
-├── src/
-│   ├── ahoracado.py
-│   └── letra.py
-├── .gitignore
-├── LICENSE
-├── main.py
-└── README.md
+# 💡 Usage
+To start the game, simply run the main script:
+```bash
+python main.py
 ```
 
-- **graphics/**: Contains libraries for rendering the game (gamelib and graphical logic).
-- **img/**: Includes demo images showcasing the game's functionality.
-- **resource/**: Contains a file with a list of words (`palabras.py`) that can be used in the game.
-- **src/**: Contains the source code files for game logic (ahoracado and letter handling).
-- **main.py**: The entry point of the application.
+1. Once the game starts, a hidden word is represented by underscores.
+2. Type a letter on your keyboard to make a guess.
+3. If the letter is in the word, it will be revealed.
+4. If not, the hangman drawing will progress.
+5. Guess the whole word before the hangman is complete to win!
 
-## 🛠️ Technologies <a name="technologies"></a>
+# 🤝 Contributing
+1. Fork the project.
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature).
+3. Commit your changes (git commit -m 'Add some AmazingFeature').
+4. Push to the Branch (git push origin feature/AmazingFeature).
+5. Open a Pull Request.
 
-This project is built with:
-
-- Python
-- [Gamelib](https://github.com/dessaya/python-gamelib) (A library created by the instructor to facilitate the use of threads and rendering for the interface)
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions are welcome! If you'd like to improve the game, feel free to fork the repository and submit a pull request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
-
-## 📚 About This Project <a name="about"></a>
-
-This project is an implementation of the classic Hangman game in Python, focusing on game logic and graphical interface through structured programming principles.
-
-## 📄 License <a name="license"></a>
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## 🔐 Security <a name="security"></a>
-
-If you discover a vulnerability, please review our [Security Policy](.github/SECURITY.md) for guidance on reporting.
-
-## 📜 Code of Conduct <a name="code-of-conduct"></a>
-
-Please read our [Code of Conduct](.github/CODE_OF_CONDUCT.md) to understand expected behavior.
+# 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
