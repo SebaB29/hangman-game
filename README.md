@@ -52,8 +52,8 @@ Hangman/
 ## ⚙️ Installation
 1. Clone the repository:
    ```bash
-   git clone git@github.com:SebaB29/HangmanGame.git
-   cd hangman
+   git clone git@github.com:SebaB29/hangman-game.git
+   cd hangman-game
    ```
 
 # 💡 Usage
